@@ -1,0 +1,16 @@
+https://www.youtube.com/watch?v=oUIjHQMBdD4&ab_channel=CodingwithKazim
+串接 mongodb
+
+
+終端機指令:
+django-admin startproject <name> : 新增專案
+python manage.py help            : 查看相關命令
+python manage.py startapp <name> : 新增app
+python manage.py runserver       : 開啟web服務
+python manage.py createsuperuser : 創後台管理帳號
+
+
+
+
+
+

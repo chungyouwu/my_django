@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% block extra_head %}
+    {% endblock %}
+</head>
+<body>
+    <div class="nav">
+        <a href="/">Index</a>
+        <a href="/userlist/1/">Userlist</a>
+        <a href="/register/">Registry</a>
+    </div>
+    
+    <div class="container">
+        {% block mycontent %}
+        {% endblock %}
+    </div>
+    
+    <footer>
+        <p>One locust, Two locust, Three .........</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block mytitle %}
+userlist
+{% endblock %}
+
+{% block mycontent %}
+<div class="hero">
+    <h1>User Information</h1><br>
+    <table border="1" cellpadding="1" cellsapcing="0" align="center">
+        <tr>
+            <th>userid</th>
+            <th>account</th>
+            <th>password</th>
+            <th>username</th>
+            <th>gender</th>
+            <th>age</th>
+        </tr>
+        {% for user in myusers2 %}
+            <tr>
+                <td>{{user.userid}}</td>
+                <td>{{user.account}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.gender}}</td>
+                <td>{{user.age}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="mytoolbar" style="margin-top: 30px;">
+        <a href="/userlist/{{mypage.first}}/" style="margin: 3px; border: 2px solid black; padding: 2px; text-decoration: none;">first</a>
+        <a href="/userlist/{{mypage.myprev}}/" style="margin: 3px; border: 2px solid black; padding: 2px; text-decoration: none;">previous page</a>
+        <a href="/userlist/{{mypage.mynext}}/" style="margin: 3px; border: 2px solid black; padding: 2px; text-decoration: none;">next page</a>
+        <a href="/userlist/{{mypage.last}}/" style="margin: 3px; border: 2px solid black; padding: 2px; text-decoration: none;">last</a>
+    </div>
+</div>
+
+{% endblock %}

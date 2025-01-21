@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}index{% endblock %}
+
+{% block mycontent %}
+    <div class="hero">
+        <h1>Welcome to testing web</h1>
+        <img src="{% static 'img/Django.png' %}" alt="Django Logo" class="hero-img">
+        <div class="content">
+            <p>Django Locust stress testing with mongoDB</p>
+        </div>
+    </div>
+{% endblock %}
